@@ -86,3 +86,13 @@ Maintaining this is annoying, so I've created a helper `add.py` script. 1. Run t
 4. Run: `./app.py <THREAD_ID>`
 
 This will automatically update your threads file with the new game mapping. Remember to `./restart.sh` afterwards.
+
+## Troubleshooting
+
+### No module named pip
+
+Try installing pip with the following commands:
+```
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+```
