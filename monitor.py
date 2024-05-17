@@ -23,7 +23,7 @@ try:
     FORUM_THREADS = json.load(f)
 except:
   with open('threads.json', 'w') as f:
-    json.dump(GAME_LIST, f, indent = 2)
+    f.write("{ }")
 
 GAME_LIST = {}
 REVERSE_GAME_LIST = {}

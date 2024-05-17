@@ -93,6 +93,6 @@ This will automatically update your threads file with the new game mapping. Reme
 
 Try installing pip with the following commands:
 ```
-python -m ensurepip --upgrade
+python -m ensurepip --upgrade --user
 python -m pip install --upgrade pip
 ```
