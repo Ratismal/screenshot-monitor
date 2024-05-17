@@ -13,6 +13,12 @@ The following is not supported, but may be added if there is demand
 
 ## Setup
 
+Clone this repository to your steamdeck.
+```
+git clone https://github.com/Ratismal/screenshot-monitor
+cd screenshot-monitor
+```
+
 Before doing anything, make sure to grant execution permission to all scripts.
 ```
 chmod +x *.sh
