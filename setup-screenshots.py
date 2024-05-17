@@ -24,9 +24,9 @@ for name in os.listdir(USERDATA_PATH):
     print(data['UserLocalConfigStore']['System'])
 
     print("Setting 'InGameOverlayScreenshotSaveUncompressedPath' node to '/home/deck/Pictures/DCIM'")
-    data['UserLocalConfigStore']['InGameOverlayScreenshotSaveUncompressedPath'] = "/home/deck/Pictures/DCIM"
+    data['UserLocalConfigStore']['System']['InGameOverlayScreenshotSaveUncompressedPath'] = "/home/deck/Pictures/DCIM"
     print("Setting 'InGameOverlayScreenshotSaveUncompressed' node to '1'")
-    data['UserLocalConfigStore']['InGameOverlayScreenshotSaveUncompressed'] = "1"
+    data['UserLocalConfigStore']['System']['InGameOverlayScreenshotSaveUncompressed'] = "1"
 
     print("Writing...")
     with open(config_path, "w") as f:
