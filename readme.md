@@ -11,6 +11,13 @@ This is a small service to monitor screenshots taken on a steamdeck, and upload 
 The following is not supported, but may be added if there is demand
 - Uploading to webhooks per-game
 
+## Screenshots (haha)
+
+![Persona 5](https://owo.whats-th.is/2cnoWBF.png)
+![Thread Example](https://owo.whats-th.is/5WKrXwM.png)
+![Balatro](https://owo.whats-th.is/6txvSac.png)
+
+
 ## Setup
 
 Clone this repository to your steamdeck.
