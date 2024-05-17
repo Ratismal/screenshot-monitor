@@ -32,6 +32,11 @@ chmod +x *.sh
 chmod +x *.py
 ```
 
+Install requirements
+```
+python -m pip install -r requirements.txt
+```
+
 ### Screenshot Directory
 
 First, configure Steam to copy screenshots to a consolidated directory.
@@ -44,6 +49,8 @@ First, configure Steam to copy screenshots to a consolidated directory.
 6. Set the Screenshot Folder to "/home/deck/Pictures/DCIM"
 
 > **Note:** Steam has made an update to Desktop mode that prevents setting uncompressed screenshots directory. As a workaround, I've created a `setup-screenshots.py` script that will edit the config file directly to enable it. **Use this at your own risk.**
+> 
+> Make sure Steam isn't running. I recommend being in Desktop mode with steam closed.
 > 
 > Run the script.
 > ```
@@ -93,6 +100,14 @@ This will automatically update your threads file with the new game mapping. Reme
 
 Try installing pip with the following commands:
 ```
-python -m ensurepip --upgrade --user
-python -m pip install --upgrade pip
+wget https://bootstrap.pypa.io/get-pip.py  
+python3 get-pip.py --user
 ```
+
+Make sure that you update your PATH by putting this in `~/.bashrc`
+```
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+```
+And reloading .bashrc with `source ~/.bashrc`
