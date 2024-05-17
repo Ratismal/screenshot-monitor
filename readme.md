@@ -13,6 +13,12 @@ The following is not supported, but may be added if there is demand
 
 ## Setup
 
+Before doing anything, make sure to grant execution permission to all scripts.
+```
+chmod +x *.sh
+chmod +x *.py
+```
+
 ### Screenshot Directory
 
 First, configure Steam to copy screenshots to a consolidated directory.
@@ -26,15 +32,11 @@ First, configure Steam to copy screenshots to a consolidated directory.
 
 > **Note:** Steam has made an update to Desktop mode that prevents setting uncompressed screenshots directory. As a workaround, I've created a `setup-screenshots.py` script that will edit the config file directly to enable it. **Use this at your own risk.**
 > 
-> First, add execution permission to the script
-> ```
-> chmod +x ./setup-screenshots.py
-> ```
-> 
-> Then run the script.
+> Run the script.
 > ```
 > ./setup-screenshots.py
 > ```
+> You will get confirmation on what's been updated, and backups to the config file will be created first.
 
 ### Config File
 
@@ -48,11 +50,10 @@ Finally, set up the systemctl service. This is what will allow the monitor to ru
 
 Run:
 ```
-chmod +x ./install.sh
 ./install.sh
 ```
 
-There are also helper scripts for `start.sh`, `stop.sh`, `restart.sh`, and `status.sh`. These are just wrappers around the systemctl commands since it's annoying typing them all the time. Make sure to `chmod +x` each script you want to use.
+There are also helper scripts for `start.sh`, `stop.sh`, `restart.sh`, and `status.sh`. These are just wrappers around the systemctl commands since it's annoying typing them all the time.
 
 
 ## Usage
@@ -69,6 +70,6 @@ Setting up threads for specific games is a bit more involved. First, create a `t
 Maintaining this is annoying, so I've created a helper `add.py` script. 1. Run the screenshot service. 
 2. Open the game you want to add to a thread
 3. Take a screenshot. This will create a file called `lastgame` that contains the app id of the game you're trying to add.
-4. Run: `./app.py <THREAD_ID>`. (Make sure you've done `chmod +x ./app.py` some point previously)
+4. Run: `./app.py <THREAD_ID>`
 
 This will automatically update your threads file with the new game mapping. Remember to `./restart.sh` afterwards.
