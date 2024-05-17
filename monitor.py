@@ -8,6 +8,12 @@ from watchdog.events import FileSystemEventHandler
 import requests as r
 import re
 import json
+import os
+
+if not os.path.isdir("/home/deck/Pictures/DCIM"):
+  os.mkdir("/home/deck/Pictures/DCIM")
+if not os.path.isdir("/home/deck/Videos"):
+  os.mkdir("/home/deck/Videos")
 
 WEBHOOK = ""
 FORUM_WEBHOOK = ""
