@@ -1,0 +1,1 @@
+journalctl --user -u screenshot-monitor.service
