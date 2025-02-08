@@ -111,3 +111,22 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 ```
 And reloading .bashrc with `source ~/.bashrc`
+
+### Service won't start
+
+If you're getting this error:
+```
+screenshot-monitor.service: Main process exited, code=exited, status=203/EXEC
+screenshot-monitor.service: Failed with result 'exit-code'.
+```
+
+Make sure your screenshot monitor folder is at `/home/deck/screenshot-monitor`, as this is where the service looks for the script.
+
+### No such file or directory: 'games.json'
+
+Create a file called `games.json` with the content:
+```json
+{}
+```
+
+I should fix this eventually:tm:.
