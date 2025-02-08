@@ -73,7 +73,7 @@ Run:
 ./install.sh
 ```
 
-There are also helper scripts for `start.sh`, `stop.sh`, `restart.sh`, and `status.sh`. These are just wrappers around the systemctl commands since it's annoying typing them all the time.
+There are also helper scripts for `start.sh`, `stop.sh`, `restart.sh`, `status.sh`, and `logs.sh`. These are just wrappers around the systemctl commands since it's annoying typing them all the time.
 
 
 ## Usage
